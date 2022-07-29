@@ -1,0 +1,110 @@
+:root {
+  /* Primary colors */
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --darkGreen: rgb(13, 57, 41);
+
+  /* Neutral */
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --font01: "Montserrat", sans-serif;
+  --font02: "Fraunces", serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  background-color: var(--cream);
+}
+
+p {
+  font-size: 1.4rem;
+  font-family: var(--font01);
+  color: var(--darkGrayishBlue);
+}
+
+.info__title,
+.info__price span {
+  font-family: var(--font02);
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.container {
+  width: 90%;
+  margin: 10rem auto;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+}
+.img_product {
+  background-image: url(/images/image-product-mobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 25rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.container__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.info__product {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.info__description {
+  line-height: 1.8;
+}
+.info__price span {
+  color: var(--darkCyan);
+  padding-right: 2rem;
+}
+
+.button {
+  background-color: var(--darkCyan);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button a {
+  font-family: var(--font01);
+  text-decoration: none;
+  color: var(--white);
+}
+.button:active {
+  background-color: var(--darkGreen);
+}
+
+@media (min-width: 680px) {
+  .container {
+    width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .img_product {
+    background-image: url(/images/image-product-desktop.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5rem;
+  }
+}
